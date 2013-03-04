@@ -14,7 +14,7 @@ set :user,            "cjiang"
 set :scm_username,    "McGar"
 # set :group,           "staff"
 set :use_sudo,        true
-
+set :gateway, "rubydev.aicure.com"
 role :web,    "rubydev.aicure.com"
 role :app,    "rubydev.aicure.com"
 role :db,     "rubydev.aicure.com", :primary => true
