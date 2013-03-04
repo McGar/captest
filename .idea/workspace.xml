@@ -10,7 +10,7 @@
     <file path="/Gemfile" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362413439758" ignored="false" />
     <file path="/database.yml" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362414220902" ignored="false" />
     <file path="/unicorn.rb" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362418978400" ignored="false" />
-    <file path="/deploy.rb" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362425813864" ignored="false" />
+    <file path="/deploy.rb" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362429474897" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +39,7 @@
       <file leaf-file-name="deploy.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/deploy.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="43" selection-start="282" selection-end="282" vertical-scroll-proportion="0.18090452">
+            <state line="9" column="61" selection-start="342" selection-end="342" vertical-scroll-proportion="0.20351759">
               <folding />
             </state>
           </provider>
@@ -570,7 +570,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/deploy.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="43" selection-start="282" selection-end="282" vertical-scroll-proportion="0.18090452">
+        <state line="9" column="61" selection-start="342" selection-end="342" vertical-scroll-proportion="0.20351759">
           <folding />
         </state>
       </provider>
