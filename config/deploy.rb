@@ -7,7 +7,7 @@ set :branch,          "origin/master"
 set :migrate_target,  :current
 set :ssh_options,     { :forward_agent => true }
 set :rails_env,       "production"
-set :deploy_to,       "/var/www/rubydev.aicure.com/current"
+set :deploy_to,       "/var/www/rubydev.aicure.com/"
 set :normalize_asset_timestamps, false
 
 set :user,            "cjiang"
