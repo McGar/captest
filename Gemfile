@@ -39,3 +39,6 @@ gem 'jquery-rails'
 
 gem 'unicorn'
 gem 'unicorn-rails'
+
+gem 'capistrano'
+gem 'rvm-capistrano'
