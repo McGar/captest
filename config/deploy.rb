@@ -15,9 +15,9 @@ set :scm_username,    "McGar"
 # set :group,           "staff"
 set :use_sudo,        true
 set :gateway, "rubydev.aicure.com"
-role :web,    "rubydev.aicure.com"
-role :app,    "rubydev.aicure.com"
-role :db,     "rubydev.aicure.com", :primary => true
+role :web,    "204.13.110.73"
+role :app,    "204.13.110.73"
+role :db,     "204.13.110.73", :primary => true
 
 set(:latest_release)  { fetch(:current_path) }
 set(:release_path)    { fetch(:current_path) }

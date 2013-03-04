@@ -39,7 +39,7 @@
       <file leaf-file-name="deploy.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/deploy.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="53" selection-start="475" selection-end="475" vertical-scroll-proportion="0.31658292">
+            <state line="19" column="28" selection-start="626" selection-end="626" vertical-scroll-proportion="0.42964825">
               <folding />
             </state>
           </provider>
@@ -570,7 +570,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/deploy.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="53" selection-start="475" selection-end="475" vertical-scroll-proportion="0.31658292">
+        <state line="19" column="28" selection-start="626" selection-end="626" vertical-scroll-proportion="0.42964825">
           <folding />
         </state>
       </provider>
