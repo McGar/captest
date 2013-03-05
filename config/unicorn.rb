@@ -26,7 +26,7 @@ if env == "production"
 
   # feel free to point this anywhere accessible on the filesystem
   # user 'deployer', 'cjiang'
-  user 'cjiang'
+  user "www-data", "www-data"
   shared_path = "/home/cjiang/unicorn_logs/"
 
   stderr_path "#{shared_path}/log/unicorn.stderr.log"

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="406f27f3-87c1-4076-a6fe-ab1b337ffe70" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/deploy.rb" afterPath="$PROJECT_DIR$/config/deploy.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/unicorn.rb" afterPath="$PROJECT_DIR$/config/unicorn.rb" />
     </list>
     <ignored path="captest.iws" />
@@ -49,7 +48,7 @@
       <file leaf-file-name="unicorn.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/unicorn.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="14" selection-start="901" selection-end="901" vertical-scroll-proportion="0.5162973">
+            <state line="3" column="0" selection-start="127" selection-end="127" vertical-scroll-proportion="0.07040417">
               <folding />
             </state>
           </provider>
@@ -639,7 +638,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/unicorn.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="14" selection-start="901" selection-end="901" vertical-scroll-proportion="0.5162973">
+        <state line="3" column="0" selection-start="127" selection-end="127" vertical-scroll-proportion="0.07040417">
           <folding />
         </state>
       </provider>
