@@ -10,8 +10,8 @@
     <file path="/Dummy.txt" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362440830204" ignored="false" />
     <file path="/Gemfile" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362413439758" ignored="false" />
     <file path="/database.yml" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362414220902" ignored="false" />
-    <file path="/unicorn.rb" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362418978400" ignored="false" />
-    <file path="/deploy.rb" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362510691076" ignored="false" />
+    <file path="/unicorn.rb" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362512838415" ignored="false" />
+    <file path="/deploy.rb" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362512107489" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,19 +37,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="deploy.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="deploy.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/deploy.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="12" selection-start="529" selection-end="534" vertical-scroll-proportion="0.38196287">
+            <state line="139" column="137" selection-start="4879" selection-end="4879" vertical-scroll-proportion="-8.366667">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="unicorn.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="unicorn.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/unicorn.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="33" selection-start="1447" selection-end="1447" vertical-scroll-proportion="-12.9">
+            <state line="28" column="14" selection-start="901" selection-end="901" vertical-scroll-proportion="0.5162973">
               <folding />
             </state>
           </provider>
@@ -94,8 +94,8 @@
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/config/unicorn.rb" />
         <option value="$PROJECT_DIR$/config/deploy.rb" />
+        <option value="$PROJECT_DIR$/config/unicorn.rb" />
       </list>
     </option>
   </component>
@@ -630,16 +630,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/unicorn.rb">
+    <entry file="file://$PROJECT_DIR$/config/deploy.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="33" selection-start="1447" selection-end="1447" vertical-scroll-proportion="-12.9">
+        <state line="139" column="137" selection-start="4879" selection-end="4879" vertical-scroll-proportion="-8.366667">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/deploy.rb">
+    <entry file="file://$PROJECT_DIR$/config/unicorn.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="12" selection-start="529" selection-end="534" vertical-scroll-proportion="0.38196287">
+        <state line="28" column="14" selection-start="901" selection-end="901" vertical-scroll-proportion="0.5162973">
           <folding />
         </state>
       </provider>
