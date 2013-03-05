@@ -30,7 +30,7 @@ set(:current_revision)  { capture("cd #{current_path}; git rev-parse --short HEA
 set(:latest_revision)   { capture("cd #{current_path}; git rev-parse --short HEAD").strip }
 set(:previous_revision) { capture("cd #{current_path}; git rev-parse --short HEAD@{1}").strip }
 
-# Add gems needed to make ruby bundle rake available
+# Specify PATH here
 set :default_environment, {
     'PATH' => "/usr/local/rvm/gems/ruby-1.9.3-p374/bin:/usr/local/rvm/gems/ruby-1.9.3-p374@global/bin:/usr/local/rvm/rubies/ruby-1.9.3-p374/bin:/usr/local/rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:$PATH"
 }
@@ -39,7 +39,7 @@ set :default_environment, {
 default_environment["RAILS_ENV"] = 'production'
 # Enable :pty or :tty
 default_run_options[:pty] = true
-#  Not Use our ruby-1.9.3-p374@cjiang gemset
+#  Use ruby-1.9.3-p374@cjiang gemset
 #  default_environment["PATH"]         = "--"
 #  default_environment["GEM_HOME"]     = "--"
 #  default_environment["GEM_PATH"]     = "--"
@@ -77,12 +77,22 @@ namespace :deploy do
   desc "Update the deployed code."
   task :update_code, :except => { :no_release => true } do
     # chmod make sure bundle install succeed
-    run "cd #{current_path}; cd ../; #{try_sudo} chmod -R 777 shared"
-    #run "#{try_sudo} chmod -R 777 #{current_path}"
+    # run "cd #{current_path}; cd ../; #{try_sudo} chmod -R 777 shared"
+    run "#{try_sudo} chmod -R 777 #{shared_path}"
+    run "#{try_sudo} chmod -R 777 #{current_path}"
     run "cd #{current_path};#{try_sudo} git fetch origin; #{try_sudo} git reset --hard #{branch}"
 
     finalize_update
   end
+
+  desc "Update the database (overwritten to avoid symlink)"
+  task :migrations_only do
+    transaction do
+      update_code
+    end
+    migrate
+  end
+
 
   desc "Update the database (overwritten to avoid symlink)"
   task :migrations do
@@ -95,18 +105,21 @@ namespace :deploy do
 
   task :finalize_update, :except => { :no_release => true } do
     # chmod it back
-    run "#{try_sudo} chmod -R g+w #{latest_release}" if fetch(:group_writable, true)
+    run "#{try_sudo} chmod -R 777 #{latest_release}" if fetch(:group_writable, true)
 
     # mkdir -p is making sure that the directories are there for some SCM's that don't
     # save empty folders
     run <<-CMD
-      rm -rf #{latest_release}/log #{latest_release}/public/system #{latest_release}/tmp/pids &&
+      #{try_sudo} rm -rf #{latest_release}/log #{latest_release}/public/system #{latest_release}/tmp/pids &&
       mkdir -p #{latest_release}/public &&
       mkdir -p #{latest_release}/tmp &&
+      mkdir -p #{latest_release}/public/system &&
+      mkdir -p #{latest_release}/tmp/pids &&
+      mkdir -p #{shared_path}/pids &&
       ln -s #{shared_path}/log #{latest_release}/log &&
-      ln -s #{shared_path}/system #{latest_release}/public/system &&
+      ln -s #{shared_path}/public/system #{latest_release}/public/system &&
       ln -s #{shared_path}/pids #{latest_release}/tmp/pids &&
-      ln -sf #{shared_path}/database.yml #{latest_release}/config/database.yml
+      ln -sf #{latest_release}/config/database.yml #{shared_path}/database.yml
     CMD
 
     if fetch(:normalize_asset_timestamps, true)
@@ -118,7 +131,7 @@ namespace :deploy do
 
   desc "Zero-downtime restart of Unicorn"
   task :restart, :except => { :no_release => true } do
-    run "kill -s USR2 `cat /tmp/unicorn.my_site.pid`"
+    run "kill -s USR2 `cat /tmp/unicorn.captest.pid`"
   end
 
   desc "Start unicorn"
@@ -128,7 +141,7 @@ namespace :deploy do
 
   desc "Stop unicorn"
   task :stop, :except => { :no_release => true } do
-    run "kill -s QUIT `cat /tmp/unicorn.my_site.pid`"
+    run "kill -s QUIT `cat /tmp/unicorn.captest.pid`"
   end
 
   namespace :rollback do
