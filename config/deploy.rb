@@ -2,7 +2,7 @@
 require "bundler/capistrano"
 
 set :scm,             :git
-set :repository,      "github.com/McGar/captest.git"
+set :repository,      "https://github.com/McGar/captest.git"
 set :branch,          "origin/master"
 set :migrate_target,  :current
 set :ssh_options,     { :forward_agent => true }
@@ -12,8 +12,8 @@ set :normalize_asset_timestamps, false
 
 set :user,            "cjiang"
 set :scm_username,    "McGar"
-set :password, "20120313"
-set :scm_passphrase, "Mg1123581321"
+set :password,        "20120313"
+set :scm_passphrase,  "Mg1123581321"
 # set :group,           "staff"
 set :use_sudo,        true
 # set :gateway, "rubydev.aicure.com"
@@ -30,9 +30,16 @@ set(:current_revision)  { capture("cd #{current_path}; git rev-parse --short HEA
 set(:latest_revision)   { capture("cd #{current_path}; git rev-parse --short HEAD").strip }
 set(:previous_revision) { capture("cd #{current_path}; git rev-parse --short HEAD@{1}").strip }
 
-default_environment["RAILS_ENV"] = 'production'
+# Add gems needed to make ruby bundle rake available
+set :default_environment, {
+    'PATH' => "/usr/local/rvm/gems/ruby-1.9.3-p374/bin:/usr/local/rvm/gems/ruby-1.9.3-p374@global/bin:/usr/local/rvm/rubies/ruby-1.9.3-p374/bin:/usr/local/rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:$PATH"
+}
 
-# Use our ruby-1.9.2-p290@my_site gemset
+
+default_environment["RAILS_ENV"] = 'production'
+# Enable :pty or :tty
+default_run_options[:pty] = true
+#  Not Use our ruby-1.9.3-p374@cjiang gemset
 #  default_environment["PATH"]         = "--"
 #  default_environment["GEM_HOME"]     = "--"
 #  default_environment["GEM_PATH"]     = "--"
@@ -52,7 +59,8 @@ namespace :deploy do
     dirs = [deploy_to, shared_path]
     dirs += shared_children.map { |d| File.join(shared_path, d) }
     run "#{try_sudo} mkdir -p #{dirs.join(' ')} && #{try_sudo} chmod g+w #{dirs.join(' ')}"
-    run "git clone #{repository} #{current_path}"
+    run "sudo git clone #{repository} #{current_path}"
+
   end
 
   task :cold do
@@ -68,7 +76,11 @@ namespace :deploy do
 
   desc "Update the deployed code."
   task :update_code, :except => { :no_release => true } do
-    run "cd #{current_path}; git fetch origin; git reset --hard #{branch}"
+    # chmod make sure bundle install succeed
+    run "cd #{current_path}; cd ../; #{try_sudo} chmod -R 777 shared"
+    #run "#{try_sudo} chmod -R 777 #{current_path}"
+    run "cd #{current_path};#{try_sudo} git fetch origin; #{try_sudo} git reset --hard #{branch}"
+
     finalize_update
   end
 
@@ -82,7 +94,8 @@ namespace :deploy do
   end
 
   task :finalize_update, :except => { :no_release => true } do
-    run "chmod -R g+w #{latest_release}" if fetch(:group_writable, true)
+    # chmod it back
+    run "#{try_sudo} chmod -R g+w #{latest_release}" if fetch(:group_writable, true)
 
     # mkdir -p is making sure that the directories are there for some SCM's that don't
     # save empty folders
