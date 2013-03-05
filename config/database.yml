@@ -15,7 +15,7 @@ development:
   database: captest_development
   pool: 5
   username: aidb
-  password: meetaic2012
+  password: Meetaic2012
   socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and

@@ -1,7 +1,7 @@
 # config/unicorn.rb
 # Set environment to development unless something else is specified
 env = ENV["RAILS_ENV"] || "production"
-
+# RAILS_ROOT = "/var/www/rubydev.aicure.com/current"
 # See http://unicorn.bogomips.org/Unicorn/Configurator.html for complete
 # documentation.
 worker_processes 4
@@ -22,7 +22,7 @@ pid "/tmp/unicorn.captest.pid"
 if env == "production"
   # Help ensure your application will always spawn in the symlinked
   # "current" directory that Capistrano sets up.
-  working_directory "/var/www/rubydev.aicure.com/current"
+  working_directory "/var/www/rubydev.aicure.com/captest/current/"
 
   # feel free to point this anywhere accessible on the filesystem
   # user 'deployer', 'cjiang'
