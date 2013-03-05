@@ -137,12 +137,12 @@ namespace :deploy do
   desc "Start unicorn"
   task :start, :except => { :no_release => true } do
     # use rvmsudo instead of sudo, and make sure rvmsudo can work
-    run "cd #{current_path} ;#{try_sudo} touch newfile; rvmsudo bundle exec unicorn_rails -c config/unicorn.rb -E production -D; #{try_sudo} rm newfile"
+    run "cd #{current_path} ;#{try_sudo} touch newfile; rvmsudo bundle exec unicorn_rails -l 8081 -c config/unicorn.rb -E production -D; #{try_sudo} rm newfile"
   end
 
   desc "Stop unicorn"
   task :stop, :except => { :no_release => true } do
-    run "kill -s QUIT `cat /tmp/unicorn.captest.pid`"
+    run "#{try_sudo} kill -s QUIT `cat /tmp/unicorn.captest.pid`"
   end
 
   namespace :rollback do
