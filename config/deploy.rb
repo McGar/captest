@@ -17,11 +17,12 @@ set :password,        "20120313"
 set :scm_passphrase,  "Mg1123581321"
 # set :group,           "staff"
 set :use_sudo,        true
+set :server,          "rubydev.aicure.com"
 # set :gateway, "rubydev.aicure.com"
 # set :gateway, "204.13.110.73"
-role :web,    "rubydev.aicure.com"
-role :app,    "rubydev.aicure.com"
-role :db,     "rubydev.aicure.com", :primary => true
+role :web,    :server
+role :app,    :server
+role :db,     :server, :primary => true
 
 #set(:latest_release)  { fetch(:current_path) }
 #set(:release_path)    { fetch(:current_path) }

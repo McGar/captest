@@ -1,4 +1,5 @@
 Captest::Application.routes.draw do
+  match "/captest" => redirect("https://rubydev.aicure.com")
   resources :lists
 
   # The priority is based upon order of creation:
