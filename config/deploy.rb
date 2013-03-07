@@ -13,7 +13,8 @@ set :ssh_options,     { :forward_agent => true }
 set :rails_env,       "production"
 # File system location
 set :deploy_to,       "/var/www/rubydev.aicure.com/#{app_name}"
-
+# Set port to listen
+set :port_id,         8081
 set :normalize_asset_timestamps, false
 set :keep_releases,   10
 set :user,            "cjiang"
@@ -167,7 +168,7 @@ namespace :deploy do
   #  end
   #end
 
-  # Self-defined way for first time deployments database update
+  # Self-defined tasks
   desc "Update code and then update database"
   task :migrations_with_update_code do
     transaction do
@@ -196,6 +197,28 @@ namespace :deploy do
     migrate
     restart
   end
+
+
+  desc <<-DESC
+    Prepares one or more servers for deployment. Before you can use any \
+    of the Capistrano deployment tasks with your project, you will need to \
+    make sure all of your servers have been prepared with `cap deploy:setup'. When \
+    you add a new server to your cluster, you can easily run the setup task \
+    on just that server by specifying the HOSTS environment variable:
+
+      $ cap HOSTS=new.server.com deploy:setup
+
+    It is safe to run this task on servers that have already been set up; it \
+    will not destroy any deployed revisions or data.
+  DESC
+  task :setup, :except => { :no_release => true } do
+    dirs = [deploy_to, releases_path, shared_path]
+    dirs += shared_children.map { |d| File.join(shared_path, d.split('/').last) }
+    run "#{try_sudo} mkdir -p #{dirs.join(' ')}"
+    run "#{try_sudo} chmod g+w #{dirs.join(' ')}" if fetch(:group_writable, true)
+    fix_permissions
+  end
+
 
   desc <<-DESC
     [internal] Touches up the released code. This is called by update_code \
@@ -320,7 +343,7 @@ namespace :deploy do
   desc "Start unicorn"
   task :start, :except => { :no_release => true } do
     # use rvmsudo instead of sudo, and make sure rvmsudo can work
-    run "cd #{current_path} ;#{try_sudo} touch newfile; rvmsudo bundle exec unicorn_rails -l 8081 -c config/unicorn.rb -E #{rails_env} -D; #{try_sudo} rm newfile"
+    run "cd #{current_path} ;#{try_sudo} touch newfile; rvmsudo bundle exec unicorn_rails -l #{port_id} -c config/unicorn.rb -E #{rails_env} -D; #{try_sudo} rm newfile"
   end
 
   desc "Stop unicorn"
