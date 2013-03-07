@@ -1,6 +1,6 @@
 # config/deploy.rb 
 require "bundler/capistrano"
-set :app_name, 'captest'
+set :app_name,        'captest'
 set :scm,             :git
 set :repository,      "https://github.com/McGar/#{app_name}.git"
 # set :branch,          "origin/master"
