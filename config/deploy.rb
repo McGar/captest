@@ -1,5 +1,6 @@
 # config/deploy.rb 
 require "bundler/capistrano"
+# App name
 set :app_name,        'captest'
 set :scm,             :git
 set :repository,      "https://github.com/McGar/#{app_name}.git"
@@ -7,8 +8,12 @@ set :repository,      "https://github.com/McGar/#{app_name}.git"
 set :branch,          "master"
 set :migrate_target,  :current
 set :ssh_options,     { :forward_agent => true }
+
+# Rails env
 set :rails_env,       "production"
+# File system location
 set :deploy_to,       "/var/www/rubydev.aicure.com/#{app_name}"
+
 set :normalize_asset_timestamps, false
 set :keep_releases,   10
 set :user,            "cjiang"
@@ -19,6 +24,7 @@ set :scm_passphrase,  "Mg1123581321"
 set :use_sudo,        true
 # set :gateway, "rubydev.aicure.com"
 # set :gateway, "204.13.110.73"
+# Multiple servers
 # role :app, [192.168.1.1,192.168.1.2] multiple servers
 # role :web, "machine1.mydomain.com", "machine2.mydomain.com", "machine3.mydomain.com"
 # role :app, "machine1.mydomain.com", "machine2.mydomain.com", "machine3.mydomain.com"
@@ -41,8 +47,8 @@ set :default_environment, {
     'PATH' => "/usr/local/rvm/gems/ruby-1.9.3-p374/bin:/usr/local/rvm/gems/ruby-1.9.3-p374@global/bin:/usr/local/rvm/rubies/ruby-1.9.3-p374/bin:/usr/local/rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:$PATH"
 }
 
-
-default_environment["RAILS_ENV"] = 'production'
+# If not set rails env
+# default_environment["RAILS_ENV"] = 'production'
 # Enable :pty or :tty
 default_run_options[:pty] = true
 #  Use ruby-1.9.3-p374@cjiang gemset

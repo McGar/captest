@@ -4,6 +4,7 @@
     <list default="true" id="406f27f3-87c1-4076-a6fe-ab1b337ffe70" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/deploy.rb" afterPath="$PROJECT_DIR$/config/deploy.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="captest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -11,7 +12,7 @@
     <file path="/Gemfile" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362413439758" ignored="false" />
     <file path="/database.yml" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362515507776" ignored="false" />
     <file path="/unicorn.rb" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362672660806" ignored="false" />
-    <file path="/deploy.rb" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362691590308" ignored="false" />
+    <file path="/deploy.rb" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362692375166" ignored="false" />
     <file path="/production.rb" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362519365775" ignored="false" />
     <file path="/lists_controller.rb" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362685906932" ignored="false" />
     <file path="/index.html" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362686081306" ignored="false" />
@@ -44,7 +45,7 @@
       <file leaf-file-name="deploy.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/deploy.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="33" selection-start="357" selection-end="357" vertical-scroll-proportion="-3.483871">
+            <state line="128" column="22" selection-start="4091" selection-end="4091" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -53,7 +54,7 @@
       <file leaf-file-name="unicorn.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/unicorn.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="42" selection-start="1088" selection-end="1088" vertical-scroll-proportion="0.0">
+            <state line="18" column="26" selection-start="637" selection-end="637" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -62,7 +63,7 @@
       <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="18" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0">
+            <state line="50" column="35" selection-start="1438" selection-end="1438" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -71,7 +72,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="51" selection-start="209" selection-end="219" vertical-scroll-proportion="0.30456853">
+            <state line="8" column="30" selection-start="195" selection-end="195" vertical-scroll-proportion="0.24365482">
               <folding />
             </state>
           </provider>
@@ -741,13 +742,6 @@
         <state line="21" column="33" selection-start="709" selection-end="709" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="40" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="25" selection-start="798" selection-end="798" vertical-scroll-proportion="0.80411124">
@@ -778,28 +772,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/unicorn.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="42" selection-start="1088" selection-end="1088" vertical-scroll-proportion="0.0">
+        <state line="18" column="26" selection-start="637" selection-end="637" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="18" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0">
+        <state line="50" column="35" selection-start="1438" selection-end="1438" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="40" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/deploy.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="33" selection-start="357" selection-end="357" vertical-scroll-proportion="-3.483871">
+        <state line="128" column="22" selection-start="4091" selection-end="4091" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="51" selection-start="209" selection-end="219" vertical-scroll-proportion="0.30456853">
+        <state line="8" column="30" selection-start="195" selection-end="195" vertical-scroll-proportion="0.24365482">
           <folding />
         </state>
       </provider>
