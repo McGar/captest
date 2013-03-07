@@ -171,6 +171,11 @@ namespace :deploy do
   end
 
   # Overwritten tasks
+  task :default do
+    update
+    migrate
+    restart
+  end
 
   desc <<-DESC
     [internal] Touches up the released code. This is called by update_code \
@@ -238,6 +243,54 @@ namespace :deploy do
 
     run "#{try_sudo} rm -f #{current_path} && #{try_sudo} ln -s #{latest_release} #{current_path}"
   end
+
+  namespace :rollback do
+    desc <<-DESC
+      [internal] Points the current symlink at the previous revision.
+      This is called by the rollback sequence, and should rarely (if
+      ever) need to be called directly.
+    DESC
+    task :revision, :except => { :no_release => true } do
+      if previous_release
+        run "#{try_sudo} rm #{current_path}; #{try_sudo} ln -s #{previous_release} #{current_path}"
+      else
+        abort "could not rollback the code because there is no prior release"
+      end
+    end
+
+    desc <<-DESC
+      [internal] Removes the most recently deployed release.
+      This is called by the rollback sequence, and should rarely
+      (if ever) need to be called directly.
+    DESC
+    task :cleanup, :except => { :no_release => true } do
+      run "if [ `readlink #{current_path}` != #{current_release} ]; then #{try_sudo} rm -rf #{current_release}; fi"
+    end
+
+    desc <<-DESC
+      Rolls back to the previously deployed version. The `current' symlink will \
+      be updated to point at the previously deployed version, and then the \
+      current release will be removed from the servers. You'll generally want \
+      to call `rollback' instead, as it performs a `restart' as well.
+    DESC
+    task :code, :except => { :no_release => true } do
+      revision
+      cleanup
+    end
+
+    desc <<-DESC
+      Rolls back to a previous version and restarts. This is handy if you ever \
+      discover that you've deployed a lemon; `cap rollback' and you're right \
+      back where you were, on the previously deployed version.
+    DESC
+    task :default do
+      revision
+      restart
+      cleanup
+    end
+  end
+
+
 
 
   desc "Get permissions fixed"
