@@ -1,14 +1,14 @@
 # config/deploy.rb 
 require "bundler/capistrano"
-
+set :app_name, 'captest'
 set :scm,             :git
-set :repository,      "https://github.com/McGar/#{APP_NAME}.git"
+set :repository,      "https://github.com/McGar/#{app_name}.git"
 # set :branch,          "origin/master"
 set :branch,          "master"
 set :migrate_target,  :current
 set :ssh_options,     { :forward_agent => true }
 set :rails_env,       "production"
-set :deploy_to,       "/var/www/rubydev.aicure.com/#{APP_NAME}"
+set :deploy_to,       "/var/www/rubydev.aicure.com/#{app_name}"
 set :normalize_asset_timestamps, false
 
 set :user,            "cjiang"
@@ -47,11 +47,11 @@ default_run_options[:pty] = true
 #  default_environment["RUBY_VERSION"] = "ruby-1.9.3-p374"
 #
 #  default_run_options[:shell] = 'bash'
-
+# app_name = 'captest'
 
 namespace :deploy do
 
-  APP_NAME = 'captest'
+
 
   #desc "Deploy your application"
   #
@@ -249,7 +249,7 @@ namespace :deploy do
   # Self-defined START, STOP, RESTART
   desc "Zero-downtime restart of Unicorn"
   task :restart, :except => { :no_release => true } do
-    run "#{try_sudo} kill -s USR2 `cat /tmp/unicorn.#{APP_NAME}.pid`"
+    run "#{try_sudo} kill -s USR2 `cat /tmp/unicorn.#{app_name}.pid`"
   end
 
   desc "Start unicorn"
@@ -260,7 +260,7 @@ namespace :deploy do
 
   desc "Stop unicorn"
   task :stop, :except => { :no_release => true } do
-    run "#{try_sudo} kill -s QUIT `cat /tmp/unicorn.#{APP_NAME}.pid`"
+    run "#{try_sudo} kill -s QUIT `cat /tmp/unicorn.#{app_name}.pid`"
   end
 
 end
