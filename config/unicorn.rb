@@ -1,6 +1,7 @@
 # config/unicorn.rb
 # Set environment to development unless something else is specified
 env = ENV["RAILS_ENV"] || "production"
+APP_NAME = 'captest'
 # RAILS_ROOT = "/var/www/rubydev.aicure.com/current"
 # See http://unicorn.bogomips.org/Unicorn/Configurator.html for complete
 # documentation.
@@ -8,21 +9,21 @@ worker_processes 4
 
 # listen on both a Unix domain socket and a TCP port,
 # we use a shorter backlog for quicker failover when busy
-# listen "/tmp/captest.socket", :backlog => 64
-listen "/tmp/captest.socket"
+# listen "/tmp/#{APP_NAME}.socket", :backlog => 64
+listen "/tmp/#{APP_NAME}.socket"
 # Preload our app for more speed
 preload_app true
 
 # nuke workers after 30 seconds instead of 60 seconds (the default)
 timeout 30
 
-pid "/tmp/unicorn.captest.pid"
+pid "/tmp/unicorn.#{APP_NAME}.pid"
 
 # Production specific settings
 if env == "production"
   # Help ensure your application will always spawn in the symlinked
   # "current" directory that Capistrano sets up.
-  working_directory "/var/www/rubydev.aicure.com/captest/current/"
+  working_directory "/var/www/rubydev.aicure.com/#{APP_NAME}/current/"
 
   # feel free to point this anywhere accessible on the filesystem
   # user 'deployer', 'cjiang'
@@ -42,7 +43,7 @@ before_fork do |server, worker|
 
   # Before forking, kill the master process that belongs to the .oldbin PID.
   # This enables 0 downtime deploys.
-  old_pid = "/tmp/unicorn.captest.pid.oldbin"
+  old_pid = "/tmp/unicorn.#{APP_NAME}.pid.oldbin"
   if File.exists?(old_pid) && server.pid != old_pid
     begin
       Process.kill("QUIT", File.read(old_pid).to_i)

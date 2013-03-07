@@ -3,15 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="406f27f3-87c1-4076-a6fe-ab1b337ffe70" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/deploy.rb" afterPath="$PROJECT_DIR$/config/deploy.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/unicorn.rb" afterPath="$PROJECT_DIR$/config/unicorn.rb" />
     </list>
     <ignored path="captest.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362669603026" ignored="false" />
     <file path="/Gemfile" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362413439758" ignored="false" />
     <file path="/database.yml" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362515507776" ignored="false" />
-    <file path="/unicorn.rb" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362604343095" ignored="false" />
-    <file path="/deploy.rb" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362670014834" ignored="false" />
+    <file path="/unicorn.rb" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362672660806" ignored="false" />
+    <file path="/deploy.rb" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362672587593" ignored="false" />
     <file path="/production.rb" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362519365775" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,10 +38,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="deploy.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="deploy.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/deploy.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="163" column="54" selection-start="5567" selection-end="5567" vertical-scroll-proportion="0.46928746">
+            <state line="51" column="33" selection-start="1940" selection-end="1940" vertical-scroll-proportion="-7.4666667">
               <folding />
             </state>
           </provider>
@@ -50,16 +50,16 @@
       <file leaf-file-name="deploy.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p286/gems/capistrano-2.14.2/lib/capistrano/recipes/deploy.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="175" column="32" selection-start="6923" selection-end="6923" vertical-scroll-proportion="0.0">
+            <state line="301" column="22" selection-start="10054" selection-end="12505" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="unicorn.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="unicorn.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/unicorn.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="59" selection-start="1051" selection-end="1051" vertical-scroll-proportion="0.0">
+            <state line="2" column="44" selection-start="126" selection-end="126" vertical-scroll-proportion="0.04396985">
               <folding />
             </state>
           </provider>
@@ -96,8 +96,8 @@
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
-        <option value="$PROJECT_DIR$/config/unicorn.rb" />
         <option value="$PROJECT_DIR$/config/deploy.rb" />
+        <option value="$PROJECT_DIR$/config/unicorn.rb" />
       </list>
     </option>
   </component>
@@ -731,23 +731,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/unicorn.rb">
+    <entry file="file://$PROJECT_DIR$/config/deploy.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="59" selection-start="1051" selection-end="1051" vertical-scroll-proportion="0.0">
+        <state line="51" column="33" selection-start="1940" selection-end="1940" vertical-scroll-proportion="-7.4666667">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p286/gems/capistrano-2.14.2/lib/capistrano/recipes/deploy.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="175" column="32" selection-start="6923" selection-end="6923" vertical-scroll-proportion="0.0">
+        <state line="301" column="22" selection-start="10054" selection-end="12505" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/deploy.rb">
+    <entry file="file://$PROJECT_DIR$/config/unicorn.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="163" column="54" selection-start="5567" selection-end="5567" vertical-scroll-proportion="0.46928746">
+        <state line="2" column="44" selection-start="126" selection-end="126" vertical-scroll-proportion="0.04396985">
           <folding />
         </state>
       </provider>

@@ -2,12 +2,13 @@
 require "bundler/capistrano"
 
 set :scm,             :git
-set :repository,      "https://github.com/McGar/captest.git"
-set :branch,          "origin/master"
+set :repository,      "https://github.com/McGar/#{APP_NAME}.git"
+# set :branch,          "origin/master"
+set :branch,          "master"
 set :migrate_target,  :current
 set :ssh_options,     { :forward_agent => true }
 set :rails_env,       "production"
-set :deploy_to,       "/var/www/rubydev.aicure.com/captest"
+set :deploy_to,       "/var/www/rubydev.aicure.com/#{APP_NAME}"
 set :normalize_asset_timestamps, false
 
 set :user,            "cjiang"
@@ -49,6 +50,9 @@ default_run_options[:pty] = true
 
 
 namespace :deploy do
+
+  APP_NAME = 'captest'
+
   #desc "Deploy your application"
   #
   #task :default do
@@ -151,18 +155,101 @@ namespace :deploy do
   #end
 
   # Self-defined way for first time deployments database update
-  desc "Update the database only, for the first time after setup."
-  task :migrations_only do
+  desc "Update code and then update database"
+  task :migrations_with_update_code do
     transaction do
       update_code
     end
     migrate
   end
 
+  desc "Update the database only, for the first time after setup."
+  task :migrations_only do
+    migrate
+  end
+
+  # Overwritten tasks
+
+  desc <<-DESC
+    [internal] Touches up the released code. This is called by update_code \
+    after the basic deploy finishes. It assumes a Rails project was deployed, \
+    so if you are deploying something else, you may want to override this \
+    task with your own environment's requirements.
+
+    This task will make the release group-writable (if the :group_writable \
+    variable is set to true, which is the default). It will then set up \
+    symlinks to the shared directory for the log, system, and tmp/pids \
+    directories, and will lastly touch all assets in public/images, \
+    public/stylesheets, and public/javascripts so that the times are \
+    consistent (so that asset timestamping works).  This touch process \
+    is only carried out if the :normalize_asset_timestamps variable is \
+    set to true, which is the default The asset directories can be overridden \
+    using the :public_children variable.
+  DESC
+  task :finalize_update, :except => { :no_release => true } do
+    escaped_release = latest_release.to_s.shellescape
+    commands = []
+    commands << "#{try_sudo} chmod -R -- g+w #{escaped_release}" if fetch(:group_writable, true)
+
+    # mkdir -p is making sure that the directories are there for some SCM's that don't
+    # save empty folders
+    shared_children.map do |dir|
+      d = dir.shellescape
+      if (dir.rindex('/')) then
+        commands += ["#{try_sudo} rm -rf -- #{escaped_release}/#{d}",
+                     "#{try_sudo} mkdir -p -- #{escaped_release}/#{dir.slice(0..(dir.rindex('/'))).shellescape}"]
+      else
+        commands << "#{try_sudo} rm -rf -- #{escaped_release}/#{d}"
+      end
+      commands << "#{try_sudo} ln -s -- #{shared_path}/#{dir.split('/').last.shellescape} #{escaped_release}/#{d}"
+    end
+
+    run commands.join(' && ') if commands.any?
+
+    if fetch(:normalize_asset_timestamps, true)
+      stamp = Time.now.utc.strftime("%Y%m%d%H%M.%S")
+      asset_paths = fetch(:public_children, %w(images stylesheets javascripts)).map { |p| "#{escaped_release}/public/#{p}" }
+      run("find #{asset_paths.join(" ")} -exec touch -t #{stamp} -- {} ';'; true",
+          :env => { "TZ" => "UTC" }) if asset_paths.any?
+    end
+  end
+
+
+
+  desc <<-DESC
+    Updates the symlink to the most recently deployed version. Capistrano works \
+    by putting each new release of your application in its own directory. When \
+    you deploy a new version, this task's job is to update the `current' symlink \
+    to point at the new version. You will rarely need to call this task \
+    directly; instead, use the `deploy' task (which performs a complete \
+    deploy, including `restart') or the 'update' task (which does everything \
+    except `restart').
+  DESC
+  task :create_symlink, :except => { :no_release => true } do
+    on_rollback do
+      if previous_release
+        run "#{try_sudo} rm -f #{current_path}; #{try_sudo} ln -s #{previous_release} #{current_path}; true"
+      else
+        logger.important "no previous release to rollback to, rollback of symlink skipped"
+      end
+    end
+
+    run "#{try_sudo} rm -f #{current_path} && #{try_sudo} ln -s #{latest_release} #{current_path}"
+  end
+
+
+  desc "Get permissions fixed"
+  task :fix_permissions do
+    run "cd #{deploy_to}; #{try_sudo} chmod -R 777 *"
+    #run "#{try_sudo} chmod -R 777 #{shared_path}"
+    #run "#{try_sudo} chmod -R 777 #{current_path}"
+    #run "#{try_sudo} chmod -R 777 #{release_path}"
+  end
+
   # Self-defined START, STOP, RESTART
   desc "Zero-downtime restart of Unicorn"
   task :restart, :except => { :no_release => true } do
-    run "#{try_sudo} kill -s USR2 `cat /tmp/unicorn.captest.pid`"
+    run "#{try_sudo} kill -s USR2 `cat /tmp/unicorn.#{APP_NAME}.pid`"
   end
 
   desc "Start unicorn"
@@ -173,7 +260,7 @@ namespace :deploy do
 
   desc "Stop unicorn"
   task :stop, :except => { :no_release => true } do
-    run "#{try_sudo} kill -s QUIT `cat /tmp/unicorn.captest.pid`"
+    run "#{try_sudo} kill -s QUIT `cat /tmp/unicorn.#{APP_NAME}.pid`"
   end
 
 end
