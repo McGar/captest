@@ -17,12 +17,16 @@ set :password,        "20120313"
 set :scm_passphrase,  "Mg1123581321"
 # set :group,           "staff"
 set :use_sudo,        true
-set :server,          "rubydev.aicure.com"
 # set :gateway, "rubydev.aicure.com"
 # set :gateway, "204.13.110.73"
-role :web,    :server
-role :app,    :server
-role :db,     :server, :primary => true
+# role :app, [192.168.1.1,192.168.1.2] multiple servers
+# role :web, "machine1.mydomain.com", "machine2.mydomain.com", "machine3.mydomain.com"
+# role :app, "machine1.mydomain.com", "machine2.mydomain.com", "machine3.mydomain.com"
+# role :db,  "db.mydomain.com"
+
+role :web,    "rubydev.aicure.com"
+role :app,    "rubydev.aicure.com"
+role :db,     "rubydev.aicure.com", :primary => true
 
 #set(:latest_release)  { fetch(:current_path) }
 #set(:release_path)    { fetch(:current_path) }
@@ -310,7 +314,7 @@ namespace :deploy do
   desc "Start unicorn"
   task :start, :except => { :no_release => true } do
     # use rvmsudo instead of sudo, and make sure rvmsudo can work
-    run "cd #{current_path} ;#{try_sudo} touch newfile; rvmsudo bundle exec unicorn_rails -l 8081 -c config/unicorn.rb -E production -D; #{try_sudo} rm newfile"
+    run "cd #{current_path} ;#{try_sudo} touch newfile; rvmsudo bundle exec unicorn_rails -l 8081 -c config/unicorn.rb -E #{rails_env} -D; #{try_sudo} rm newfile"
   end
 
   desc "Stop unicorn"
