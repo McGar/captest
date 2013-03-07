@@ -10,7 +10,7 @@ set :ssh_options,     { :forward_agent => true }
 set :rails_env,       "production"
 set :deploy_to,       "/var/www/rubydev.aicure.com/#{app_name}"
 set :normalize_asset_timestamps, false
-
+set :keep_releases,   3
 set :user,            "cjiang"
 set :scm_username,    "McGar"
 set :password,        "20120313"
@@ -48,6 +48,8 @@ default_run_options[:pty] = true
 #
 #  default_run_options[:shell] = 'bash'
 # app_name = 'captest'
+
+after "deploy", "deploy:cleanup"
 
 namespace :deploy do
 
