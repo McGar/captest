@@ -170,6 +170,15 @@ namespace :deploy do
     migrate
   end
 
+
+  desc "Get permissions fixed"
+  task :fix_permissions do
+    run "cd #{deploy_to}; #{try_sudo} chmod -R 777 *"
+    #run "#{try_sudo} chmod -R 777 #{shared_path}"
+    #run "#{try_sudo} chmod -R 777 #{current_path}"
+    #run "#{try_sudo} chmod -R 777 #{release_path}"
+  end
+
   # Overwritten tasks
   task :default do
     update
@@ -290,16 +299,6 @@ namespace :deploy do
     end
   end
 
-
-
-
-  desc "Get permissions fixed"
-  task :fix_permissions do
-    run "cd #{deploy_to}; #{try_sudo} chmod -R 777 *"
-    #run "#{try_sudo} chmod -R 777 #{shared_path}"
-    #run "#{try_sudo} chmod -R 777 #{current_path}"
-    #run "#{try_sudo} chmod -R 777 #{release_path}"
-  end
 
   # Self-defined START, STOP, RESTART
   desc "Zero-downtime restart of Unicorn"

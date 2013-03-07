@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="406f27f3-87c1-4076-a6fe-ab1b337ffe70" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/deploy.rb" afterPath="$PROJECT_DIR$/config/deploy.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
     </list>
     <ignored path="captest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,19 +39,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="deploy.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="deploy.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/deploy.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="300" column="12" selection-start="10824" selection-end="10824" vertical-scroll-proportion="-2.2580645">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="deploy.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p286/gems/capistrano-2.14.2/lib/capistrano/recipes/deploy.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="357" column="0" selection-start="14817" selection-end="16434" vertical-scroll-proportion="-4.767857">
+            <state line="316" column="30" selection-start="11496" selection-end="11496" vertical-scroll-proportion="11.330677">
               <folding />
             </state>
           </provider>
@@ -76,10 +66,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="29" selection-start="194" selection-end="194" vertical-scroll-proportion="0.27745664">
+            <state line="8" column="29" selection-start="194" selection-end="194" vertical-scroll-proportion="-5.3333335">
               <folding />
             </state>
           </provider>
@@ -113,8 +103,8 @@
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/config/unicorn.rb" />
         <option value="$PROJECT_DIR$/app/controllers/lists_controller.rb" />
-        <option value="$PROJECT_DIR$/config/deploy.rb" />
         <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/config/deploy.rb" />
       </list>
     </option>
   </component>
@@ -791,23 +781,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="29" selection-start="194" selection-end="194" vertical-scroll-proportion="-5.3333335">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p286/gems/capistrano-2.14.2/lib/capistrano/recipes/deploy.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="357" column="0" selection-start="14817" selection-end="16434" vertical-scroll-proportion="-4.767857">
+        <state line="352" column="23" selection-start="14680" selection-end="14680" vertical-scroll-proportion="6.5849056">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/deploy.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="300" column="12" selection-start="10824" selection-end="10824" vertical-scroll-proportion="-2.2580645">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="29" selection-start="194" selection-end="194" vertical-scroll-proportion="0.27745664">
+        <state line="316" column="30" selection-start="11496" selection-end="11496" vertical-scroll-proportion="11.330677">
           <folding />
         </state>
       </provider>
