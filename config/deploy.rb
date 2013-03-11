@@ -360,7 +360,7 @@ namespace :deploy do
 
   desc "Modify the upstart configs, default in /etc/init"
   task  :setup_upstart do
-   run "cd /etc/init; #{try_sudo} rm #{app_name}.conf; #{try_sudo} mv #{current_path}/#{app_name}.conf ."
+   run "cd /etc/init; #{try_sudo} rm #{app_name}.conf; #{try_sudo} cp #{current_path}/#{app_name}.conf ."
   end
 
   desc "start background processes"

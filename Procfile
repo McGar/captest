@@ -1,1 +1,1 @@
-unicorn: rake start_unicorn
+unicorn: rake RAILS_ENV = production start_unicorn
