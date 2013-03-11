@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="406f27f3-87c1-4076-a6fe-ab1b337ffe70" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Procfile" afterPath="$PROJECT_DIR$/Procfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/deploy.rb" afterPath="$PROJECT_DIR$/config/deploy.rb" />
     </list>
     <ignored path="captest.iws" />
@@ -10,13 +11,13 @@
     <file path="/Gemfile" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1363027890259" ignored="false" />
     <file path="/database.yml" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362515507776" ignored="false" />
     <file path="/unicorn.rb" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1363012664882" ignored="false" />
-    <file path="/deploy.rb" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1363033561167" ignored="false" />
+    <file path="/deploy.rb" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1363038917240" ignored="false" />
     <file path="/production.rb" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1363035235451" ignored="false" />
     <file path="/lists_controller.rb" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362685906932" ignored="false" />
     <file path="/index.html" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362686081306" ignored="false" />
     <file path="/routes.rb" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362691337300" ignored="false" />
     <file path="/Rakefile" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1363035452971" ignored="false" />
-    <file path="/Procfile" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1363036535151" ignored="false" />
+    <file path="/Procfile" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1363039002846" ignored="false" />
     <file path="/captest.conf" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1363030564221" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,16 +47,16 @@
       <file leaf-file-name="scheduler.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/workmvc/WorkerTest/app/controllers/workers/scheduler.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="27" selection-start="939" selection-end="956" vertical-scroll-proportion="0.0">
+            <state line="14" column="29" selection-start="432" selection-end="432" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="deploy.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="deploy.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/deploy.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="349" column="33" selection-start="12758" selection-end="12758" vertical-scroll-proportion="0.89349115">
+            <state line="332" column="32" selection-start="12177" selection-end="12177" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -70,10 +71,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Procfile" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Procfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Procfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="17" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0">
+            <state line="0" column="36" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -139,8 +140,8 @@
         <option value="$APPLICATION_HOME_DIR$/rubystubs193/kernel.rb" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/Rakefile" />
-        <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/config/deploy.rb" />
+        <option value="$PROJECT_DIR$/Procfile" />
       </list>
     </option>
   </component>
@@ -783,30 +784,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/workmvc/WorkerTest/app/controllers/workers/scheduler.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="27" selection-start="939" selection-end="956" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/workmvc/WorkerTest/Rakefile">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="19" selection-start="342" selection-end="342" vertical-scroll-proportion="0.36330274">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/unicorn.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="29" selection-start="825" selection-end="825" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="17" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -818,9 +798,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/unicorn.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="29" selection-start="825" selection-end="825" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/deploy.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="349" column="33" selection-start="12758" selection-end="12758" vertical-scroll-proportion="0.89349115">
+        <state line="332" column="32" selection-start="12177" selection-end="12177" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/workmvc/WorkerTest/app/controllers/workers/scheduler.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="29" selection-start="432" selection-end="432" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="36" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
