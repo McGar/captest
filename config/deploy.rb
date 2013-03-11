@@ -332,6 +332,7 @@ namespace :deploy do
       revision
       restart
       cleanup
+      fix_permissions
     end
   end
 
