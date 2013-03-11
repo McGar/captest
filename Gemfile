@@ -42,3 +42,5 @@ gem 'unicorn-rails'
 
 gem 'capistrano'
 gem 'rvm-capistrano'
+
+gem 'foreman'

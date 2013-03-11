@@ -23,6 +23,8 @@ set :password,        "20120313"
 set :scm_passphrase,  "Mg1123581321"
 # set :group,           "staff"
 set :use_sudo,        true
+# set :deployer
+set :deployer,        "cjiang"
 # set :gateway, "rubydev.aicure.com"
 # set :gateway, "204.13.110.73"
 # Multiple servers
@@ -350,6 +352,17 @@ namespace :deploy do
   task :stop, :except => { :no_release => true } do
     run "#{try_sudo} kill -s QUIT `cat /tmp/unicorn.#{app_name}.pid`"
   end
+
+  desc "Install background processes including auto-restart thread to server"
+  task :install_background_processes do
+    run "cd #{current_path}; #{try_sudo} touch newfile; rvmsudo foreman export upstart /etc/init -a #{app_name} -u #{deployer}"
+  end
+
+  desc "Modify the upstart configs, default in /etc/init"
+  task  setup_upstart do
+   run "cd /etc/init; #{try_sudo} rm #{app_name}.conf; #{try_sudo} mv #{current_path}/#{app_name}.conf ."
+  end
+
 
 end
 
