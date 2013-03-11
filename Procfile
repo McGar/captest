@@ -1,1 +1,1 @@
-unicorn: echo cjiang 20120313 | rvmsudo bundle exec unicorn_rails -l 8081 -c config/unicorn.rb -E production -D
+unicorn: rvmsudo -u root bundle exec unicorn_rails -l 8081 -c config/unicorn.rb -E production -D
