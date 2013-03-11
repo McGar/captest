@@ -18,7 +18,7 @@ task :start_unicorn => :environment do
   # run "cd #{path} ; #{try_sudo} touch newfile; rvmsudo bundle exec unicorn_rails -l #{port_id} -c config/unicorn.rb -E #{rails_env} -D; #{try_sudo} rm newfile"
   system "cd #{path}"
   # echo password need modification according to the deployer set in deploy.rb
-  system 'echo 20120313 | sudo -S touch newtmpfile'
-  system "rvmsudo bundle exec unicorn_rails -l #{port_id} -c config/unicorn.rb -E #{rails_env} -D"
-  system "sudo rm newtmpfile"
+
+  system "echo 20120313 | rvmsudo bundle exec unicorn_rails -l #{port_id} -c config/unicorn.rb -E #{rails_env} -D"
+
 end
