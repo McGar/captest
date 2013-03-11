@@ -5,7 +5,7 @@ app_name = 'captest'
 # RAILS_ROOT = "/var/www/rubydev.aicure.com/current"
 # See http://unicorn.bogomips.org/Unicorn/Configurator.html for complete
 # documentation.
-worker_processes 4
+worker_processes 1
 
 # listen on both a Unix domain socket and a TCP port,
 # we use a shorter backlog for quicker failover when busy
@@ -30,8 +30,8 @@ if env == "production"
   user "www-data", "www-data"
   shared_path = "/home/cjiang/unicorn_logs/"
 
-  stderr_path "#{shared_path}/log/unicorn.stderr.log"
-  stdout_path "#{shared_path}/log/unicorn.stdout.log"
+  stderr_path "#{shared_path}/log/#{app_name}.unicorn.stderr.log"
+  stdout_path "#{shared_path}/log/#{app_name}.unicorn.stdout.log"
 end
 
 before_fork do |server, worker|
