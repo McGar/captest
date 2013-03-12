@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="406f27f3-87c1-4076-a6fe-ab1b337ffe70" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/captest.conf" afterPath="$PROJECT_DIR$/captest.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
     </list>
     <ignored path="captest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,10 +52,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="captest.conf" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="captest.conf" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/captest.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="7" selection-start="320" selection-end="320" vertical-scroll-proportion="0.0">
+            <state line="10" column="2" selection-start="271" selection-end="271" vertical-scroll-proportion="0.33771107">
               <folding />
             </state>
           </provider>
@@ -107,10 +106,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="30" selection-start="195" selection-end="195" vertical-scroll-proportion="0.28458497">
+            <state line="12" column="29" selection-start="229" selection-end="229" vertical-scroll-proportion="-8.0">
               <folding />
             </state>
           </provider>
@@ -149,8 +148,8 @@
         <option value="$PROJECT_DIR$/config/deploy.rb" />
         <option value="$PROJECT_DIR$/Rakefile" />
         <option value="$PROJECT_DIR$/Procfile" />
-        <option value="$PROJECT_DIR$/captest.conf" />
         <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/captest.conf" />
       </list>
     </option>
   </component>
@@ -813,16 +812,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/captest.conf">
+    <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="7" selection-start="320" selection-end="320" vertical-scroll-proportion="0.0">
+        <state line="12" column="29" selection-start="229" selection-end="229" vertical-scroll-proportion="-8.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
+    <entry file="file://$PROJECT_DIR$/captest.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="30" selection-start="195" selection-end="195" vertical-scroll-proportion="0.28458497">
+        <state line="10" column="2" selection-start="271" selection-end="271" vertical-scroll-proportion="0.33771107">
           <folding />
         </state>
       </provider>
