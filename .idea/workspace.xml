@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="406f27f3-87c1-4076-a6fe-ab1b337ffe70" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Procfile" afterPath="$PROJECT_DIR$/Procfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakefile" afterPath="$PROJECT_DIR$/Rakefile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/captest.conf" afterPath="$PROJECT_DIR$/captest.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/captest.iml" afterPath="$PROJECT_DIR$/.idea/captest.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
     </list>
     <ignored path="captest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,7 +18,7 @@
     <file path="/routes.rb" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362691337300" ignored="false" />
     <file path="/Rakefile" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1363097127056" ignored="false" />
     <file path="/Procfile" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1363097138435" ignored="false" />
-    <file path="/captest.conf" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1363097290557" ignored="false" />
+    <file path="/captest.conf" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1363106414449" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,10 +53,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="captest.conf" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="captest.conf" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/captest.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="16" selection-start="398" selection-end="398" vertical-scroll-proportion="0.67542213">
+            <state line="20" column="5" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -69,7 +65,7 @@
       <file leaf-file-name="deploy.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/deploy.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="332" column="32" selection-start="12177" selection-end="12177" vertical-scroll-proportion="0.0">
+            <state line="384" column="56" selection-start="13790" selection-end="13790" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -102,10 +98,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="30" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0">
+            <state line="8" column="30" selection-start="195" selection-end="195" vertical-scroll-proportion="0.28458497">
               <folding />
             </state>
           </provider>
@@ -150,11 +146,11 @@
         <option value="$PROJECT_DIR$/config/environment.rb" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$APPLICATION_HOME_DIR$/rubystubs193/kernel.rb" />
-        <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/config/deploy.rb" />
         <option value="$PROJECT_DIR$/Rakefile" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/captest.conf" />
+        <option value="$PROJECT_DIR$/public/index.html" />
       </list>
     </option>
   </component>
@@ -764,13 +760,6 @@
         <state line="1309" column="8" selection-start="57104" selection-end="57104" vertical-scroll-proportion="0.33211008" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="30" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="61" column="24" selection-start="2284" selection-end="2284" vertical-scroll-proportion="0.0">
@@ -786,13 +775,6 @@
     <entry file="file://$PROJECT_DIR$/config/unicorn.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="29" selection-start="825" selection-end="825" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/deploy.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="332" column="32" selection-start="12177" selection-end="12177" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -818,9 +800,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/deploy.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="384" column="56" selection-start="13790" selection-end="13790" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/captest.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="16" selection-start="398" selection-end="398" vertical-scroll-proportion="0.67542213">
+        <state line="20" column="5" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="30" selection-start="195" selection-end="195" vertical-scroll-proportion="0.28458497">
           <folding />
         </state>
       </provider>
