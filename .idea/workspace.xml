@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="406f27f3-87c1-4076-a6fe-ab1b337ffe70" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Procfile" afterPath="$PROJECT_DIR$/Procfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakefile" afterPath="$PROJECT_DIR$/Rakefile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/captest.conf" afterPath="$PROJECT_DIR$/captest.conf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/deploy.rb" afterPath="$PROJECT_DIR$/config/deploy.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
     </list>
     <ignored path="captest.iws" />
@@ -12,14 +14,14 @@
     <file path="/Gemfile" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1363027890259" ignored="false" />
     <file path="/database.yml" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362515507776" ignored="false" />
     <file path="/unicorn.rb" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1363012664882" ignored="false" />
-    <file path="/deploy.rb" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1363038917240" ignored="false" />
+    <file path="/deploy.rb" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1363111400689" ignored="false" />
     <file path="/production.rb" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1363035235451" ignored="false" />
     <file path="/lists_controller.rb" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362685906932" ignored="false" />
     <file path="/index.html" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362686081306" ignored="false" />
     <file path="/routes.rb" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362691337300" ignored="false" />
-    <file path="/Rakefile" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1363097127056" ignored="false" />
-    <file path="/Procfile" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1363097138435" ignored="false" />
-    <file path="/captest.conf" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1363106414449" ignored="false" />
+    <file path="/Rakefile" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1363112082633" ignored="false" />
+    <file path="/Procfile" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1363112094078" ignored="false" />
+    <file path="/captest.conf" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1363111979556" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +41,7 @@
       <file leaf-file-name="Rakefile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Rakefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="2" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0">
+            <state line="11" column="18" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -48,7 +50,7 @@
       <file leaf-file-name="captest.conf" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/captest.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="14" selection-start="113" selection-end="113" vertical-scroll-proportion="0.0">
+            <state line="0" column="83" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -57,7 +59,7 @@
       <file leaf-file-name="deploy.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/deploy.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="361" column="22" selection-start="13188" selection-end="13188" vertical-scroll-proportion="0.0">
+            <state line="367" column="33" selection-start="13408" selection-end="13432" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -72,10 +74,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Procfile" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Procfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Procfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="38" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0">
+            <state line="0" column="56" selection-start="53" selection-end="53" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="environment.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/environment.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="12" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -90,10 +101,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="30" selection-start="195" selection-end="195" vertical-scroll-proportion="0.28458497">
+            <state line="8" column="35" selection-start="200" selection-end="200" vertical-scroll-proportion="-5.3333335">
               <folding />
             </state>
           </provider>
@@ -139,10 +150,10 @@
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$APPLICATION_HOME_DIR$/rubystubs193/kernel.rb" />
         <option value="$PROJECT_DIR$/config/deploy.rb" />
-        <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/captest.conf" />
-        <option value="$PROJECT_DIR$/Rakefile" />
         <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/Rakefile" />
+        <option value="$PROJECT_DIR$/Procfile" />
       </list>
     </option>
   </component>
@@ -727,11 +738,6 @@
         <state line="6" column="0" selection-start="155" selection-end="272" vertical-scroll-proportion="0.19816513" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environment.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="3" selection-start="270" selection-end="270" vertical-scroll-proportion="0.39633027" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="42" selection-start="383" selection-end="383" vertical-scroll-proportion="0.14980544" />
@@ -759,34 +765,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Rakefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="2" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/deploy.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="361" column="22" selection-start="13188" selection-end="13188" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/unicorn.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="29" selection-start="825" selection-end="825" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="38" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="42" selection-start="746" selection-end="746" vertical-scroll-proportion="0.0">
@@ -801,16 +779,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/deploy.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="367" column="33" selection-start="13408" selection-end="13432" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/captest.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="14" selection-start="113" selection-end="113" vertical-scroll-proportion="0.0">
+        <state line="0" column="83" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="30" selection-start="195" selection-end="195" vertical-scroll-proportion="0.28458497">
+        <state line="8" column="35" selection-start="200" selection-end="200" vertical-scroll-proportion="-5.3333335">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/unicorn.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="29" selection-start="825" selection-end="825" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="18" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environment.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="12" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="56" selection-start="53" selection-end="53" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

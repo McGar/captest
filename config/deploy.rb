@@ -379,6 +379,12 @@ namespace :deploy do
     run "#{try_sudo} status #{app_name}"
   end
 
+  desc "install & update upstart config"
+  task :install_update_upstart do
+    install_background_processes
+    setup_upstart
+  end
+
 end
 
 def run_rake(cmd)
