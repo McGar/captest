@@ -24,7 +24,7 @@ set :scm_passphrase,  "Mg1123581321"
 # set :group,           "staff"
 set :use_sudo,        true
 # set :deployer
-set :deployer,        "cjiang"
+set :deployer,        "root"
 # set :gateway, "rubydev.aicure.com"
 # set :gateway, "204.13.110.73"
 # Multiple servers
@@ -356,7 +356,8 @@ namespace :deploy do
 
   desc "Install background processes including auto-restart thread to server"
   task :install_background_processes do
-    run "cd #{current_path}; #{try_sudo} touch newfile; rvmsudo foreman export upstart /etc/init -a #{app_name} -u #{deployer}"
+    # run "cd #{current_path}; #{try_sudo} touch newfile; rvmsudo foreman export upstart /etc/init -a #{app_name} -u #{deployer}; #{try_sudo} rm newfile"
+    run "cd #{current_path}; #{try_sudo} -i; foreman export upstart /etc/init -a #{app_name} -u #{deployer}"
   end
 
   desc "Modify the upstart configs, default in /etc/init"

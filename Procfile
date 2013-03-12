@@ -1,1 +1,1 @@
-unicorn: cd /etc/init
+unicorn: bundle exec unicorn_rails -l 8081 -c /var/www/rubydev.aicure.com/captest/current/config/unicorn.rb -E production -D
