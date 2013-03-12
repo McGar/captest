@@ -23,7 +23,7 @@ set :password,        "20120313"
 set :scm_passphrase,  "Mg1123581321"
 # set :group,           "staff"
 set :use_sudo,        true
-# set :deployer
+# set :deployer to be root, very important to make unicorn re-start with the given configs
 set :deployer,        "root"
 # set :gateway, "rubydev.aicure.com"
 # set :gateway, "204.13.110.73"
@@ -356,13 +356,14 @@ namespace :deploy do
 
   desc "Install background processes including auto-restart thread to server"
   task :install_background_processes do
-    # run "cd #{current_path}; #{try_sudo} touch newfile; rvmsudo foreman export upstart /etc/init -a #{app_name} -u #{deployer}; #{try_sudo} rm newfile"
-    run "cd #{current_path}; #{try_sudo} -i; foreman export upstart /etc/init -a #{app_name} -u #{deployer}"
+    run "cd #{current_path}; #{try_sudo} touch newfile; rvmsudo foreman export upstart /etc/init -a #{app_name} -u #{deployer}; #{try_sudo} rm newfile"
+    # run "cd #{current_path}; #{try_sudo} -i; foreman export upstart /etc/init -a #{app_name} -u #{deployer}"
   end
 
   desc "Modify the upstart configs, default in /etc/init"
   task  :setup_upstart do
    run "cd /etc/init; #{try_sudo} rm #{app_name}.conf; #{try_sudo} cp #{current_path}/#{app_name}.conf ."
+   run "cd /etc/init; #{try_sudo} rm #{app_name}-unicorn-1.conf; #{try_sudo} cp #{current_path}/#{app_name}-unicorn-1.conf ."
   end
 
   desc "start background processes"
