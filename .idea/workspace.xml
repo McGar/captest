@@ -17,7 +17,7 @@
     <file path="/routes.rb" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1362691337300" ignored="false" />
     <file path="/Rakefile" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1363112082633" ignored="false" />
     <file path="/Procfile" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1363114166567" ignored="false" />
-    <file path="/captest.conf" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1363112517481" ignored="false" />
+    <file path="/captest.conf" changelist="406f27f3-87c1-4076-a6fe-ab1b337ffe70" time="1363114715240" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +55,7 @@
       <file leaf-file-name="captest.conf" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/captest.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="2" selection-start="271" selection-end="271" vertical-scroll-proportion="0.33771107">
+            <state line="11" column="11" selection-start="356" selection-end="356" vertical-scroll-proportion="0.37148216">
               <folding />
             </state>
           </provider>
@@ -821,7 +821,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/captest.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="2" selection-start="271" selection-end="271" vertical-scroll-proportion="0.33771107">
+        <state line="11" column="11" selection-start="356" selection-end="356" vertical-scroll-proportion="0.37148216">
           <folding />
         </state>
       </provider>
