@@ -1,1 +1,1 @@
-unicorn: RAILS_ENV=production rake start_unicorn
+unicorn: cd /etc/init
