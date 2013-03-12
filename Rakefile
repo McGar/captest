@@ -10,7 +10,4 @@ Captest::Application.load_tasks
 desc "Auto start unicorn for this app"
 task :start_unicorn => :environment do
 
-  Rails.logger.info "=========================================="
-  Rails.logger.info "Unicorn Started"
-  Rails.logger.info "=========================================="
 end
